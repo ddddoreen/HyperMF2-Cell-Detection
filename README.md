@@ -41,6 +41,7 @@ If you find our work useful, please consider citing our paper once it is publish
   year={},
   publisher={Publisher}
 }
+```
 ---
 
 ## License

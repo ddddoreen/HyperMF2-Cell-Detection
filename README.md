@@ -19,6 +19,8 @@ Dataset A:https://pan.baidu.com/s/15xMdcIaLJzcFiybftHPQQw?pwd=pgf2
 Dataset B:https://pan.baidu.com/s/1w2bs7geX3UcitTC6KG0Bpw?pwd=759c
 
 Dataset C:https://pan.baidu.com/s/1E8ECKxud7UDZawFm97iX0A?pwd=5jjh
+
+models: https://pan.baidu.com/s/1lMGIo93btZzb23UNCcJ1PA?pwd=vp6m 
 ```
 # Training
 Most of training configurations can change in the "Train settings" section of ultralytics/cfg/default.yaml. 

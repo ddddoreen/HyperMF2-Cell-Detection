@@ -1,53 +1,42 @@
-# HyperMF2-Cell-Detection
 
-Welcome to the official repository for **"Hypergraph Multi-level Mixed Feature Network for Cervical Abnormal Cell Detection"**! This project presents a novel approach to cervical abnormal cell detection using hypergraph-based multi-level mixed feature learning.
 
----
+# Installation
 
-## 📄 **About the Paper**
-This repository is associated with our research paper currently under review. We are committed to open-sourcing the code, models, and datasets **upon acceptance of the paper**. Stay tuned for updates!
+Python>=3.8.0 environment, including PyTorch>=1.8.
+The command is as follows.
 
----
-
-## 🚀 **Key Features**
-- **Hypergraph-based architecture**: Leverages hypergraph structures to model complex relationships in cervical cell data.
-- **Multi-level feature fusion**: Combines low-level and high-level features for robust cell detection.
-- **State-of-the-art performance**: Achieves competitive results on cervical abnormal cell detection benchmarks.
-
----
-
-## 📂 **Repository Structure**
-Once the code is released, the repository will include:
-- `src/`: Source code for the proposed model.
-- `models/`: Pre-trained models and weights.
-- `data/`: Instructions for accessing and preprocessing datasets.
-- `results/`: Evaluation results and performance metrics.
-- `docs/`: Additional documentation and usage guidelines.
-
----
-
-## ⏳ **Coming Soon**
-We are excited to share our work with the community! The code and resources will be made publicly available **after the paper is accepted**. Please check back later or watch this repository for updates.
-
----
-
-## 📝 **Citation**
-If you find our work useful, please consider citing our paper once it is published:
-```bibtex
-@article{yourpaper,
-  title={Hypergraph Multi-level Mixed Feature Network for Cervical Abnormal Cell Detection},
-  author={},
-  journal={},
-  year={},
-  publisher={Publisher}
-}
+```bash
+conda create -n miccai python=3.8
+conda activate miccai
+pip install -r requirements.txt  # install
 ```
----
+# Datasets
 
-## License
-This project will be released under the **[MIT License](LICENSE)** upon open-sourcing.
+Please prepare the data in the YOLO dataset format. We will provide the preprocessed data, including images and labels, which can be directly used for training. Additionally, we will also provide the trained weights, which can be directly used for testing.
+```bash
+Dataset A:https://pan.baidu.com/s/15xMdcIaLJzcFiybftHPQQw?pwd=pgf2
 
----
+Dataset B:https://pan.baidu.com/s/1w2bs7geX3UcitTC6KG0Bpw?pwd=759c
 
-Thank you for your interest in our work! We look forward to sharing our code and contributing to the research community.
+Dataset C:https://pan.baidu.com/s/1E8ECKxud7UDZawFm97iX0A?pwd=5jjh
+```
+# Training
+Most of training configurations can change in the "Train settings" section of ultralytics/cfg/default.yaml. 
+The key factors are model, data, img, epoches, batch, device and training hyperparameters.
+For example, you can use "model: hyper-yolon.yaml" to train an object detection model.
 
+```bash
+python train.py 
+```
+
+# Evaluation
+Most of evaluation configurations can change in the "Val/Test settings" section of ultralytics/cfg/default.yaml. 
+The key factors are model(weight), data, img, batch, conf, iou, half.
+
+```bash
+python ultralytics/models/yolo/detect/val.py
+```
+
+
+# Acknowledgement
+Our code is built based on the [YOLO](https://github.com/ultralytics/ultralytics).

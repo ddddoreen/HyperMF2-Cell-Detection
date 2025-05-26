@@ -25,7 +25,7 @@ models: https://pan.baidu.com/s/1lMGIo93btZzb23UNCcJ1PA?pwd=vp6m
 # Training
 Most of training configurations can change in the "Train settings" section of ultralytics/cfg/default.yaml. 
 The key factors are model, data, img, epoches, batch, device and training hyperparameters.
-For example, you can use "model: hyper-yolon.yaml" to train an object detection model.
+For example, you can use "model：YOLO-improved.yaml" to train an object detection model.
 
 ```bash
 python train.py 
